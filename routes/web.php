@@ -25,4 +25,12 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function() {
 
     Route::get('dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index']);
+
+    Route::controller(App\Http\Controllers\Admin\GenreController::class)->group(function () {
+        Route::get('/genre', 'index');
+        Route::get('/genre/create', 'create');
+        Route::post('/genre', 'store');
+        Route::get('/genre/{genre}/edit', 'edit');
+        Route::put('/genre/{genre}', 'update');
+    });
 });
