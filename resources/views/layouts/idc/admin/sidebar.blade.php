@@ -1,12 +1,24 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <ul class="nav">
       <li class="nav-item">
-        <a class="nav-link" href="index.html">
-          <i class="mdi mdi-home menu-icon"></i>
-          <span class="menu-title">Dashboard</span>
+        <a class="nav-link" href="admin/posts">
+          <i class="mdi mdi-file-document-box-outline menu-icon"></i>
+          <span class="menu-title">Posts</span>
         </a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="collapse" href="admin/users" aria-expanded="false" aria-controls="auth">
+          <i class="mdi mdi-account menu-icon"></i>
+          <span class="menu-title">Users</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url('admin/genres') }}">
+          <i class="mdi mdi-view-headline menu-icon"></i>
+          <span class="menu-title">Genres</span>
+        </a>
+      </li>
+      {{-- <li class="nav-item">
         <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
           <i class="mdi mdi-circle-outline menu-icon"></i>
           <span class="menu-title">UI Elements</span>
@@ -64,6 +76,6 @@
           <i class="mdi mdi-file-document-box-outline menu-icon"></i>
           <span class="menu-title">Documentation</span>
         </a>
-      </li>
+      </li> --}}
     </ul>
   </nav>
