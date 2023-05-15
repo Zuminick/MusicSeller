@@ -26,7 +26,7 @@ class GenreController extends Controller
         $genre = new Genre;
         $genre->name = $validatedData['name'];
         $genre->save();
-        return redirect('admin/genre')->with('message', 'Genre Added Successfully');
+        return redirect('admin/genres')->with('message', 'Genre Added Successfully');
     }
 
     public function edit(Genre $genre)
@@ -42,6 +42,6 @@ class GenreController extends Controller
 
         $genre->name = $validatedData['name'];
         $genre->update();
-        return redirect('admin/genre')->with('message', 'Genre Updated Successfully');
+        return redirect('admin/genres')->with('message', 'Genre Updated Successfully');
     }
 }

@@ -5,12 +5,12 @@
     <div class="col-md-12">
         <div class="card">
             <div class="card-header">
-                <h3>Add Genre
-                    <a href="{{ url('admin/genres') }}" class="btn btn-danger btn-sm text-white btn-primary float-end">back</a>
+                <h3>Add type
+                    <a href="{{ url('admin/types') }}" class="btn btn-danger btn-sm text-white btn-primary float-end">back</a>
                 </h3>
             </div>
             <div class="card-body">
-                <form action="{{ url('admin/genre') }}" method="POST">
+                <form action="{{ url('admin/type') }}" method="POST">
                     @csrf
 
                     <div class="row">

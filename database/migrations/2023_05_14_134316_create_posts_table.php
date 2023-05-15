@@ -11,17 +11,18 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('products', function (Blueprint $table) {
+        Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('artist');
             $table->string('name');
             $table->string('type');
-            $table->integer('release_date');
-            $table->integer('creation_date');
-            $table->text('description');
+            $table->integer('release_year');
+            $table->integer('creation_year');
+            $table->longText('description')->nullable();
+            $table->tinyInteger('status')->default('0')->comment('0=visable,1=hidden');
             $table->integer('price');
-            $table->boolean('status');
             $table->timestamps();
         });
     }
@@ -31,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('products');
+        Schema::dropIfExists('posts');
     }
 };

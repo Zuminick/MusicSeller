@@ -3,12 +3,9 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="deleteModalLabel">Genre Delete</h5>
-              {{-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button> --}}
+              <h5 class="modal-title" id="deleteModalLabel">Type Delete</h5>
             </div>
-            <form wire:submit.prevent="destroyGenre">
+            <form wire:submit.prevent="destroytype">
 
                 <div class="modal-body">
                     <h6>Are you sure?</h6>
@@ -29,8 +26,8 @@
             @endif
             <div class="card">
                 <div class="card-header">
-                    <h3>Genre
-                        <a href="{{ url('admin/genre/create') }}" class="btn btn-sm text-white btn-primary float-end">Add genre</a>
+                    <h3>type
+                        <a href="{{ url('admin/type/create') }}" class="btn btn-sm text-white btn-primary float-end">Add type</a>
                     </h3>
                 </div>
                 <div class="card-body">
@@ -43,14 +40,14 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($genres as $genre)
+                            @foreach ($types as $type)
                             <tr>
-                                <td>{{ $genre->id }}</td>
-                                <td>{{ $genre->name }}</td>
+                                <td>{{ $type->id }}</td>
+                                <td>{{ $type->name }}</td>
                                 <td>
                                     <div class="float-end">
-                                        <a href="{{ url('admin/genre/'.$genre->id.'/edit') }}" class="btn btn-success">Edit</a>
-                                        <a href="#" wire:click='deleteGenre({{ $genre->id }})' data-bs-toggle="modal" data-bs-target="#deleteModal" class="btn btn-danger">Delete</a>
+                                        <a href="{{ url('admin/type/'.$type->id.'/edit') }}" class="btn btn-success">Edit</a>
+                                        <a href="#" wire:click='deletetype({{ $type->id }})' data-bs-toggle="modal" data-bs-target="#deleteModal" class="btn btn-danger">Delete</a>
                                     </div>
                                 </td>
                             </tr>
@@ -59,7 +56,7 @@
                     </table>
 
                     <div>
-                        {{ $genres->links() }}
+                        {{ $types->links() }}
                     </div>
                 </div>
             </div>
