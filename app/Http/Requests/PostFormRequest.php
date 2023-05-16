@@ -35,7 +35,8 @@ class PostFormRequest extends FormRequest
                 'string'
             ],
             'genre_id'=>[
-                'required'
+                'required',
+                'integer'
             ],
             'type_id' => [
                 'required',

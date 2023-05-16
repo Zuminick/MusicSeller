@@ -30,19 +30,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @forelse ($collection as $item)
+                        {{-- @forelse ($collection as $item) --}}
                         <tr>
                             <td>
 
                             </td>
                         </tr>
-                        @empty
+                        {{-- @empty --}}
                         <tr>
                             <td>
 
                             </td>
                         </tr>   
-                        @endforelse
+                        {{-- @endforelse --}}
                     </tbody>
                 </table>
             </div>

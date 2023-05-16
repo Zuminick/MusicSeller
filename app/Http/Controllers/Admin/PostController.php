@@ -33,18 +33,15 @@ class PostController extends Controller
         $post->name = $validatedData['name'];
         $post->artist = $validatedData['artist'];
         $post->type = $validatedData['type_id'];
+        $post->genre_id = $validatedData['genre_id'];
         $post->release_year = $validatedData['release_year'];
         $post->creation_year = $validatedData['creation_year'];
         $post->description = $validatedData['description'];
         $post->price = $validatedData['price'];
         $post->save();
         
-        // dd($request->genre_id);
-        // foreach($request->genre_id as $genre){
-        $post->genres()->attach($request->genre_id);
-        // }
 
-        $uploadPath = 'uploads';
+        $uploadPath = 'uploads/';
 
         $i = 1;
         foreach($request->file('image') as  $imageFile){

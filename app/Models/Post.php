@@ -18,6 +18,7 @@ class Post extends Model
         'artist',
         'name',
         'type',
+        'genre',
         'release_year',
         'creation_year',
         'description',
@@ -28,10 +29,5 @@ class Post extends Model
     public function images()
     {
         return $this->belongsToMany(Image::class, 'image_post', 'post_id', 'image_id');
-    }
-
-    public function genres()
-    {
-        return $this->belongsToMany(Genre::class, 'genre_post', 'post_id', 'genre_id');
     }
 }

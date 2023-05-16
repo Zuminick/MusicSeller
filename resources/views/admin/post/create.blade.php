@@ -54,37 +54,42 @@
                                     <label>Album name</label>
                                     <input type="text" name="name" class="form-control" />
                                 </div>
-                                <div class="mb-3">
-                                    <label>Type</label>
-                                    <select name="type_id" class="custom-select custom-select-lg mb-3 form-control">
-                                        @foreach ($types as $type)
-                                        <option value="{{ $type->id }}">{{ $type->name }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label>Genre</label>
-                                    <select name="genre_id" class="form-control">
-                                        @foreach ($genres as $genre)
-                                        <option value="{{ $genre->id }}">{{ $genre->name }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label>Release date of album/single</label>
-                                        <select name="release_year" class="form-control">
-                                            @for ($i = 1900; $i < 2024; $i++)
-                                                <option value="{{ $i }}">{{ $i }}</option>
-                                            @endfor
-                                        </select>
-                                </div>
-                                <div class="mb-3">
-                                    <label>Creation date of music storage</label>
-                                    <select name="creation_year" class="form-control">
-                                        @for ($i = 1900; $i < 2024; $i++)
-                                                <option value="{{ $i }}">{{ $i }}</option>
-                                            @endfor
-                                    </select>
+
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="mb-3 col-sm">
+                                            <label>Type</label>
+                                            <select name="type_id" class="custom-select custom-select-lg mb-3 form-control">
+                                                @foreach ($types as $type)
+                                                <option value="{{ $type->id }}">{{ $type->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="mb-3 col-sm">
+                                            <label>Genre</label>
+                                            <select name="genre_id" class="form-control">
+                                                @foreach ($genres as $genre)
+                                                <option value="{{ $genre->id }}">{{ $genre->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                        <div class="mb-3 col-sm">
+                                            <label>Release date of album/single</label>
+                                                <select name="release_year" class="form-control">
+                                                    @for ($i = 1900; $i < 2024; $i++)
+                                                        <option value="{{ $i }}">{{ $i }}</option>
+                                                    @endfor
+                                                </select>
+                                        </div>
+                                        <div class="mb-3 col-sm">
+                                            <label>Creation date of music storage</label>
+                                            <select name="creation_year" class="form-control">
+                                                @for ($i = 1900; $i < 2024; $i++)
+                                                        <option value="{{ $i }}">{{ $i }}</option>
+                                                    @endfor
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="mb-3">
                                     <label>Price</label>

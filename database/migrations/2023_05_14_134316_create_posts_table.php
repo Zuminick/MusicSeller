@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('artist');
             $table->string('name');
             $table->string('type');
+            $table->unsignedBigInteger('genre_id');
+            $table->foreign('genre_id')->references('id')->on('genres')->onDelete('cascade');
             $table->integer('release_year');
             $table->integer('creation_year');
             $table->longText('description')->nullable();
