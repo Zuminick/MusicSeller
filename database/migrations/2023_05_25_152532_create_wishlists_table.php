@@ -9,10 +9,11 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up()
+    public function up(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->tinyInteger('role_as')->default('0')->comment('0=user, 1=admin');
+        Schema::create('wishlists', function (Blueprint $table) {
+            $table->foreignId('user_id')->constrained();
+            $table->foreignId('post_id')->constrained();
         });
     }
 
@@ -21,8 +22,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('role_as');
-        });
+        Schema::dropIfExists('wishlists');
     }
 };

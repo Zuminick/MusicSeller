@@ -42,10 +42,6 @@ class PostFormRequest extends FormRequest
                 'required',
                 'integer'
             ],
-            'release_year' => [
-                'required',
-                'integer'
-            ],
             'creation_year' => [
                 'required',
                 'integer'

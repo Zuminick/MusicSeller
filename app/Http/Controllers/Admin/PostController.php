@@ -14,7 +14,8 @@ class PostController extends Controller
 {
     public function index()
     {
-        return view('admin.post.index');
+        $posts = Post::all();
+        return view('admin.post.index', compact('posts'));
     }
 
     public function create()
@@ -34,7 +35,6 @@ class PostController extends Controller
         $post->artist = $validatedData['artist'];
         $post->type = $validatedData['type_id'];
         $post->genre_id = $validatedData['genre_id'];
-        $post->release_year = $validatedData['release_year'];
         $post->creation_year = $validatedData['creation_year'];
         $post->description = $validatedData['description'];
         $post->price = $validatedData['price'];
@@ -50,10 +50,15 @@ class PostController extends Controller
             $imageFile->move($uploadPath,$filename);
             $finalImagePathName = $uploadPath.$filename;
             
-            $image = new Image;
-            $image->img_url = $finalImagePathName;
-            $image->save();
-            $post->images()->attach($image->id);
+
+            $post->PostImages()->create([
+                'post_id' => $post->id,
+                'img_url' => $finalImagePathName
+            ]);
+            // $image = new Image;
+            // $image->img_url = $finalImagePathName;
+            // $image->save();
+            // $post->images()->attach($image->id);
         }
         return redirect('admin/posts')->with('message', 'Post Added Successfully');
     }

@@ -43,18 +43,24 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($genres as $genre)
-                            <tr>
-                                <td>{{ $genre->id }}</td>
-                                <td>{{ $genre->name }}</td>
-                                <td>
-                                    <div class="float-end">
-                                        <a href="{{ url('admin/genre/'.$genre->id.'/edit') }}" class="btn btn-success">Edit</a>
-                                        <a href="#" wire:click='deleteGenre({{ $genre->id }})' data-bs-toggle="modal" data-bs-target="#deleteModal" class="btn btn-danger">Delete</a>
-                                    </div>
-                                </td>
-                            </tr>
-                            @endforeach
+                            @forelse ($genres as $genre)
+                                <tr>
+                                    <td>{{ $genre->id }}</td>
+                                    <td>{{ $genre->name }}</td>
+                                    <td>
+                                        <div class="float-end">
+                                            <a href="{{ url('admin/genre/'.$genre->id.'/edit') }}" class="btn btn-success">Edit</a>
+                                            <a href="#" wire:click='deleteGenre({{ $genre->id }})' data-bs-toggle="modal" data-bs-target="#deleteModal" class="btn btn-danger">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                @empty
+                                <tr>
+                                    <td>
+                                        <td colspan="2">No genres Available</td>
+                                    </td>
+                                </tr>   
+                            @endforelse
                         </tbody>
                     </table>
 

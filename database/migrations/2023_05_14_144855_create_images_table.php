@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('images', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('post_id');
+            $table->foreign('post_id')->references('id')->on('posts')->onDelete('cascade');
             $table->string('img_url');
             $table->timestamps();
         });

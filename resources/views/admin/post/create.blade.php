@@ -74,14 +74,6 @@
                                             </select>
                                         </div>
                                         <div class="mb-3 col-sm">
-                                            <label>Release date of album/single</label>
-                                                <select name="release_year" class="form-control">
-                                                    @for ($i = 1900; $i < 2024; $i++)
-                                                        <option value="{{ $i }}">{{ $i }}</option>
-                                                    @endfor
-                                                </select>
-                                        </div>
-                                        <div class="mb-3 col-sm">
                                             <label>Creation date of music storage</label>
                                             <select name="creation_year" class="form-control">
                                                 @for ($i = 1900; $i < 2024; $i++)

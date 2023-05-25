@@ -26,7 +26,7 @@
             @endif
             <div class="card">
                 <div class="card-header">
-                    <h3>type
+                    <h3>Type
                         <a href="{{ url('admin/type/create') }}" class="btn btn-sm text-white btn-primary float-end">Add type</a>
                     </h3>
                 </div>
@@ -40,18 +40,24 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($types as $type)
-                            <tr>
-                                <td>{{ $type->id }}</td>
-                                <td>{{ $type->name }}</td>
-                                <td>
-                                    <div class="float-end">
-                                        <a href="{{ url('admin/type/'.$type->id.'/edit') }}" class="btn btn-success">Edit</a>
-                                        <a href="#" wire:click='deletetype({{ $type->id }})' data-bs-toggle="modal" data-bs-target="#deleteModal" class="btn btn-danger">Delete</a>
-                                    </div>
-                                </td>
-                            </tr>
-                            @endforeach
+                            @forelse ($types as $type)
+                                <tr>
+                                    <td>{{ $type->id }}</td>
+                                    <td>{{ $type->name }}</td>
+                                    <td>
+                                        <div class="float-end">
+                                            <a href="{{ url('admin/type/'.$type->id.'/edit') }}" class="btn btn-success">Edit</a>
+                                            <a href="#" wire:click='deletetype({{ $type->id }})' data-bs-toggle="modal" data-bs-target="#deleteModal" class="btn btn-danger">Delete</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                @empty
+                                    <tr>
+                                        <td>
+                                            <td colspan="2">No types Available</td>
+                                        </td>
+                                    </tr>   
+                            @endforelse
                         </tbody>
                     </table>
 

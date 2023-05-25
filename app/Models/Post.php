@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Type;
 use App\Models\Genre;
 use App\Models\Image;
 use Illuminate\Database\Eloquent\Model;
@@ -17,17 +18,24 @@ class Post extends Model
         'user_id',
         'artist',
         'name',
-        'type',
-        'genre',
-        'release_year',
+        'type_id',
+        'genre_id',
         'creation_year',
         'description',
         'status',
         'price',
     ];
 
-    public function images()
+    public function type()
     {
-        return $this->belongsToMany(Image::class, 'image_post', 'post_id', 'image_id');
+        return $this->belongsTo(Type::class, 'type_id', 'id');
+    }
+    public function genre()
+    {
+        return $this->belongsTo(Genre::class, 'genre_id', 'id');
+    }
+    public function PostImages()
+    {
+        return $this->hasMany(Image::class, 'post_id', 'id');
     }
 }

@@ -4,8 +4,8 @@
 <div class="row">
     <div class="col-md-12">
         @if(session('message'))
-                <div class="alert alert-success">{{ session('message') }}</div>
-            @endif
+            <div class="alert alert-success">{{ session('message') }}</div>
+        @endif
             
         <div class="card">
             <div class="card-header">
@@ -22,27 +22,39 @@
                             <th>Artist</th>
                             <th>Name</th>
                             <th>Type</th>
-                            <th>Release_year</th>
+                            <th>Genre</th>
                             <th>Creation_year</th>
-                            <th>Description</th>
                             <th>Price</th>
                             <th>Status</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {{-- @forelse ($collection as $item) --}}
-                        <tr>
-                            <td>
-
-                            </td>
-                        </tr>
-                        {{-- @empty --}}
-                        <tr>
-                            <td>
-
-                            </td>
-                        </tr>   
-                        {{-- @endforelse --}}
+                        @forelse ($posts as $post)
+                            <tr>
+                                <td>{{ $post->id }}</td>
+                                <td>{{ $post->user_id }}</td>
+                                <td>{{ $post->artist }}</td>
+                                <td>{{ $post->name }}</td>
+                                <td>{{ $post->type->name }}</td>
+                                <td>{{ $post->genre->name }}</td>
+                                <td>{{ $post->creation_year }}</td>
+                                <td>{{ $post->price }}</td>
+                                <td>{{ $post->status }}</td>
+                                <td>
+                                    <div class="float-end">
+                                        <a href="{{ url('admin/post/'.$post->id.'/edit') }}" class="btn btn-success">Edit</a>
+                                        <a href="#" wire:click='deletePost({{ $post->id }})' data-bs-toggle="modal" data-bs-target="#deleteModal" class="btn btn-danger">Delete</a>
+                                    </div>
+                                </td>
+                            </tr>
+                            @empty
+                            <tr>
+                                <td>
+                                    <td colspan="10">No Posts Available</td>
+                                </td>
+                            </tr>   
+                        @endforelse
                     </tbody>
                 </table>
             </div>

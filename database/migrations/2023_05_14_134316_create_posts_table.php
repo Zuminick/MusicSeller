@@ -17,10 +17,9 @@ return new class extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('artist');
             $table->string('name');
-            $table->string('type');
+            $table->string('type_id');
             $table->unsignedBigInteger('genre_id');
             $table->foreign('genre_id')->references('id')->on('genres')->onDelete('cascade');
-            $table->integer('release_year');
             $table->integer('creation_year');
             $table->longText('description')->nullable();
             $table->tinyInteger('status')->default('0')->comment('0=visable,1=hidden');
