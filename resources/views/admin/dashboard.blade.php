@@ -6,29 +6,32 @@
       <div class="d-flex justify-content-between flex-wrap">
         <div class="d-flex align-items-end flex-wrap">
           <div class="me-md-3 me-xl-5">
-            @if (session('message'))
-              <h2>{{ session('message') }}</h2>           
-            @endif
-            <p class="mb-md-0">Your analytics dashboard template.</p>
-          </div>
-          <div class="d-flex">
-            <i class="mdi mdi-home text-muted hover-cursor"></i>
-            <p class="text-muted mb-0 hover-cursor">&nbsp;/&nbsp;Dashboard&nbsp;/&nbsp;</p>
-            <p class="text-primary mb-0 hover-cursor">Analytics</p>
+            <h2>Admin pannel</h2>
           </div>
         </div>
-        <div class="d-flex justify-content-between align-items-end flex-wrap">
-          <button type="button" class="btn btn-light bg-white btn-icon me-3 d-none d-md-block ">
-            <i class="mdi mdi-download text-muted"></i>
-          </button>
-          <button type="button" class="btn btn-light bg-white btn-icon me-3 mt-2 mt-xl-0">
-            <i class="mdi mdi-clock-outline text-muted"></i>
-          </button>
-          <button type="button" class="btn btn-light bg-white btn-icon me-3 mt-2 mt-xl-0">
-            <i class="mdi mdi-plus text-muted"></i>
-          </button>
-          <button class="btn btn-primary mt-2 mt-xl-0">Generate report</button>
-        </div>
+      </div>
+      <div class="btn-group" role="group">
+        <a class="nav-link" href="{{ url('admin/posts') }}">
+          <i class="mdi mdi-file-document-box-outline menu-icon"></i>
+          <span class="menu-title">Posts</span>
+      </a>
+        <a class="nav-link" href="{{ url('admin/users') }}">
+          <i class="mdi mdi-account menu-icon"></i>
+          <span class="menu-title">Users</span>
+        </a>
+        <a class="nav-link" href="{{ url('admin/genres') }}">
+          <i class="mdi mdi-view-headline menu-icon"></i>
+          <span class="menu-title">Genres</span>
+        </a>
+        <a class="nav-link" href="{{ url('admin/types') }}">
+          <i class="mdi mdi-chart-pie menu-icon"></i>
+          <span class="menu-title">Types</span>
+        </a>
+        <a class="nav-link" href="{{ url('admin/forms') }}">
+          <i class="mdi mdi-file-document-box-outline"></i>
+          <span class="menu">Forms</span>
+        </a>
+      </div>
       </div>
     </div>
   </div>
