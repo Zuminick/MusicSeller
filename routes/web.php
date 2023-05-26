@@ -22,7 +22,13 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\Frontend\FrontendController::class, 'index']);
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/wishlist', [App\Http\Controllers\Frontend\WishlistController::class, 'index']);
+
+// Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+
 
 Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function() {
 

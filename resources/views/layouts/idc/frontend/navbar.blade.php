@@ -28,7 +28,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="/wishlist">
                                 <i class=""></i> Wishlist
                             </a>
                         </li>
