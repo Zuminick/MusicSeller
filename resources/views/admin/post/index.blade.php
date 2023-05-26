@@ -44,7 +44,7 @@
                                 <td>
                                     <div class="float-end">
                                         <a href="{{ url('admin/post/'.$post->id.'/edit') }}" class="btn btn-success">Edit</a>
-                                        <a href="#" wire:click='deletePost({{ $post->id }})' data-bs-toggle="modal" data-bs-target="#deleteModal" class="btn btn-danger">Delete</a>
+                                        <a href=" {{ url('admin/post/'.$post->id.'/delete') }}" onclick="return confirm('Are you sure you want to delete the post?')" class="btn btn-danger">Delete</a>
                                     </div>
                                 </td>
                             </tr>

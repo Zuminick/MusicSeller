@@ -33,15 +33,7 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function() {
         Route::get('/genre/{genre}/edit', 'edit');
         Route::put('/genre/{genre}', 'update');
     });
-
-    Route::controller(App\Http\Controllers\Admin\PostController::class)->group(function () {
-        Route::get('/posts', 'index');
-        Route::get('/post/create', 'create');
-        Route::post('/post', 'store');
-        Route::get('/post/{post}/edit', 'edit');
-        Route::put('/post/{post}', 'update');
-    });
-
+    
     Route::controller(App\Http\Controllers\Admin\TypeController::class)->group(function () {
         Route::get('/types', 'index');
         Route::get('/type/create', 'create');
@@ -49,4 +41,16 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function() {
         Route::get('/type/{type}/edit', 'edit');
         Route::put('/type/{type}', 'update');
     });
+
+    Route::controller(App\Http\Controllers\Admin\PostController::class)->group(function () {
+        Route::get('/posts', 'index');
+        Route::get('/post/create', 'create');
+        Route::post('/post', 'store');
+        Route::get('/post/{post}/edit', 'edit');
+        Route::put('/post/{post}', 'update');
+        Route::get('/post/{post}/delete', 'destroy');
+
+        Route::get('post-image/{post_image_id}/delete', 'destroyImage');
+    });
+
 });

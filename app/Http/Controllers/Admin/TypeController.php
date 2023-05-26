@@ -38,7 +38,7 @@ class TypeController extends Controller
     {
         $validatedData = $request->validated();
         
-        $type = type::findOrFail($type);
+        $type = Type::findOrFail($type);
 
         $type->name = $validatedData['name'];
         $type->update();
