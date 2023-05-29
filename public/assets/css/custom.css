@@ -1,49 +1,23 @@
-.main-navbar{
-    border-bottom: 1px solid #ccc;
+.navbar-brand{
+    color: #ffffff;
 }
-.main-navbar .top-navbar{
-    background-color: #2874f0;
-    padding-top: 10px;
-    padding-bottom: 10px;
+.navbar{
+    background-color: #e75050;
 }
-.main-navbar .top-navbar .brand-name{
-    color: #fff;
+.nav-link{
+    color: #f0e3e3;;
 }
-.main-navbar .top-navbar .nav-link{
-    color: #fff;
+.post-create-btn{
+    color: #ffffff;
+    background: #d23434;
+    border: 0px;
     font-size: 16px;
-    font-weight: 500;
+    border-radius: 8px;
+    transition-duration: 0.4s;
 }
-.main-navbar .top-navbar .dropdown-menu{
-    padding: 0px 0px;
-    border-radius: 0px;
-}
-.main-navbar .top-navbar .dropdown-menu .dropdown-item{
-    padding: 8px 16px;
-    border-bottom: 1px solid #ccc;
-    font-size: 14px;
-}
-.main-navbar .top-navbar .dropdown-menu .dropdown-item i{
-    width: 20px;
-    text-align: center;
-    color: #2874f0;
-    font-size: 14px;
-}
-.main-navbar .navbar{
-    padding: 0px;
-    background-color: #ddd;
-}
-.main-navbar .navbar .nav-item .nav-link{
-    padding: 8px 20px;
+.post-create-btn:hover{
     color: #000;
-    font-size: 15px;
-}
-
-@media only screen and (max-width: 600px) {
-    .main-navbar .top-navbar .nav-link{
-        font-size: 12px;
-        padding: 8px 10px;
-    }
+    background-color: #fff;
 }
 
 .shopping-wishlist .wishlist-header{
@@ -62,7 +36,7 @@
     padding: 10px 10px;
     margin-top: 10px;
 }
-.shopping-wishlist .wishlist-item .product-name{
+.shopping-wishlist .wishlist-item .Post-name{
     font-size: 16px;
     font-weight: 600;
     width: 100%;
@@ -71,7 +45,7 @@
     overflow: hidden;
     cursor: pointer;
 }
-.shopping-wishlist .wishlist-item .price{
+.shopping-wishlist .wishlist-item .genre{
     font-size: 16px;
     font-weight: 600;
     padding: 4px 2px;
@@ -94,3 +68,88 @@
     outline: none;
     text-align: center;
 }
+
+/* Post Card */
+.Post-card{
+    background-color: #fff;
+    /* border: 1px solid #ccc; */
+    margin-bottom: 24px;
+}
+.Post-card a{
+    text-decoration: none;
+}
+.Post-card .genre{
+    position: absolute;
+    color: #fff;
+    border-radius: 4px;
+    padding: 2px 12px;
+    margin: 8px;
+    background: #e75050;
+    font-size: 12px;
+}
+.Post-card .Post-card-img{
+    max-height: 260px;
+    overflow: hidden;
+    /* border-bottom: 1px solid #ccc; */
+}
+.Post-card .Post-card-img .type{
+    position: absolute;
+    color: #fff;
+    /* border-top-left-radius: 10%; */
+    background: #f16464;
+    padding: 2px 12px;
+    font-size: 12px;
+}
+.Post-card .Post-card-img img{
+    width: 100%;
+}
+.Post-card .Post-card-body{
+    padding: 10px 10px;
+    background: #e75050;
+}
+.Post-card .Post-card-body .Post-artist{
+    font-size: 14px;
+    font-weight: 400;
+    color: #f0e3e3;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.Post-card .Post-card-body .Post-type{
+    font-size: 14px;
+    font-weight: 400;
+    color: #f0e3e3;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.Post-card .Post-card-body .Post-price{
+    font-size: 16px;
+    font-weight: 600;
+    color: #f0e3e3;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.Post-card .Post-card-body .Post-name{
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.Post-card .Post-card-body .wishlist-btn{
+    border: 1px solid;
+    /* border-radius: 0px; */
+    color: #ffffff;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    transition-duration: 0.4s;
+}
+/* .wishlist-btn:hover{
+    color: #000;
+    background-color: #fff;
+} */
+/* Post Card End */
