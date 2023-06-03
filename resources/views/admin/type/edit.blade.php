@@ -6,7 +6,7 @@
         <div class="card">
             <div class="card-header">
                 <h3>Edit type
-                    <a href="{{ url('admin/type/create') }}" class="btn btn-sm text-white btn-primary float-end">back</a>
+                    <a href="{{ url('admin/types/create') }}" class="btn btn-sm text-white btn-primary float-end">back</a>
                 </h3>
             </div>
             <div class="card-body">

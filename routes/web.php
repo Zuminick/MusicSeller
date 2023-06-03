@@ -61,4 +61,10 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function() {
         Route::get('post-image/{post_image_id}/delete', 'destroyImage');
     });
 
+    Route::controller(App\Http\Controllers\Admin\UserController::class)->group(function () {
+        Route::get('/users', 'index');
+        Route::get('/user/{user}/edit', 'edit');
+        Route::put('/user/{user}', 'update');
+        Route::get('/user/{user}/delete', 'destroy');
+    });
 });

@@ -10,28 +10,32 @@
           </div>
         </div>
       </div>
-      <div class="btn-group" role="group">
-        <a class="nav-link" href="{{ url('admin/posts') }}">
-          <i class="mdi mdi-file-document-box-outline menu-icon"></i>
-          <span class="menu-title">Posts</span>
-      </a>
-        <a class="nav-link" href="{{ url('admin/users') }}">
-          <i class="mdi mdi-account menu-icon"></i>
-          <span class="menu-title">Users</span>
-        </a>
-        <a class="nav-link" href="{{ url('admin/genres') }}">
-          <i class="mdi mdi-view-headline menu-icon"></i>
-          <span class="menu-title">Genres</span>
-        </a>
-        <a class="nav-link" href="{{ url('admin/types') }}">
-          <i class="mdi mdi-chart-pie menu-icon"></i>
-          <span class="menu-title">Types</span>
-        </a>
-        <a class="nav-link" href="{{ url('admin/forms') }}">
-          <i class="mdi mdi-file-document-box-outline"></i>
-          <span class="menu">Forms</span>
-        </a>
-      </div>
+        <div class="btn-group" role="group">
+          <a class="btn btn-primary btn-lg" href="{{ url('admin/posts') }}">
+            <i class="mdi mdi-file-document-box-outline menu-icon"></i>
+            <span class="menu-title">Posts</span>
+          </a>
+          <a class="btn btn-primary btn-lg" href="{{ url('admin/users') }}">
+            <i class="mdi mdi-account menu-icon"></i>
+            <span class="menu-title">Users</span>
+          </a>
+          <a class="btn btn-primary btn-lg" href="{{ url('admin/genres') }}">
+            <i class="mdi mdi-view-headline menu-icon"></i>
+            <span class="menu-title">Genres</span>
+          </a>
+          <a class="btn btn-primary btn-lg" href="{{ url('admin/types') }}">
+            <i class="mdi mdi-chart-pie menu-icon"></i>
+            <span class="menu-title">Types</span>
+          </a>
+          <a class="btn btn-primary btn-lg" href="{{ url('admin/forms') }}">
+            <i class="mdi mdi-file-document-box-outline"></i>
+            <span class="menu">Forms</span>
+          </a>
+          <a class="btn btn-primary btn-lg" href="{{ url('admin/wishlists') }}">
+            <i class="mdi mdi-file-document-box-outline"></i>
+            <span class="menu">Wishlists</span>
+          </a>
+        </div>
       </div>
     </div>
   </div>

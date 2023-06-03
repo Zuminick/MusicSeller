@@ -1,4 +1,4 @@
-@extends('layouts.admin')
+div@extends('layouts.admin')
 
 @section('content')
 <div class="row">
@@ -6,7 +6,7 @@
         <div class="card">
             <div class="card-header">
                 <h3>Edit Genre
-                    <a href="{{ url('admin/genre/create') }}" class="btn btn-sm text-white btn-primary float-end">back</a>
+                    <a href="{{ url('admin/genres') }}" class="btn btn-sm text-white btn-primary float-end">back</a>
                 </h3>
             </div>
             <div class="card-body">
@@ -18,10 +18,10 @@
                         <div class="mb-3">
                             <label>Name</label>
                             <input type="text" name="name" value="{{ $genre->name }}" class="form-control">
-                            @error('name')
-                                <small class="text-danger">{{ $message }}</small>
-                            @enderror
                         </div>
+                        @error('name')
+                            <small class="text-danger">{{ $message }}</small>
+                        @enderror
 
                         <div class="mb-3">
                             <button type="submit" class="btn btn-primary">Update</button>
