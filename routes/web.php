@@ -22,12 +22,14 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\Frontend\FrontendController::class, 'index']);
 
+
+Route::controller(App\Http\Controllers\Frontend\PostController::class)->group(function () {
+    Route::get('/post/{post}', 'index');
+    Route::get('/post/create', 'create');
+    Route::post('/post', 'store');
+});
+
 Route::get('/wishlist', [App\Http\Controllers\Frontend\WishlistController::class, 'index']);
-
-// Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
-
 
 
 Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function() {

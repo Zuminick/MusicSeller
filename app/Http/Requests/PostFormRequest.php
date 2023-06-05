@@ -21,10 +21,11 @@ class PostFormRequest extends FormRequest
      */
     public function rules(): array
     {
-        return [
+     
+        $rules = [
             'user_id' => [
                 'required',
-                'integer'
+                'string'
             ],
             'artist' => [
                 'required',
@@ -60,5 +61,11 @@ class PostFormRequest extends FormRequest
                 'required'
             ]
         ];
+
+        if (!$this->has('user_id')) {
+            $rules['user_id'] = auth()->user()->id;
+        }
+
+        return $rules;
     }
 }
