@@ -31,8 +31,9 @@
                                 <td>{{ $user->role_as }}</td>
                                 <td>
                                     <div class="float-end">
-                                        <a href="{{ url('admin/user/'.$user->id.'/edit') }}" class="btn btn-success">Edit</a>
-                                        <a href=" {{ url('admin/user/'.$user->id.'/delete') }}" onclick="return confirm('Are you sure you want to delete the user?')" class="btn btn-danger">Delete</a>
+                                        <a href="{{ url('admin/user/'.$user->id.'/edit') }}" class="btn btn-success"><i class="bi bi-pencil-square"></i></a>
+                                        <a href="{{ url('admin/user/'.$user->id.'/delete') }}" onclick="return confirm('Are you sure you want to delete the user?')" class="btn btn-danger"><i class="bi bi-trash3-fill"></i></a>
+                                        <a href="{{ url('admin/'.$user->id.'/wishlist') }}" class="btn btn-success">Wishlist</a>
                                     </div>
                                 </td>
                             </tr>

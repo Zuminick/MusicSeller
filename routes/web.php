@@ -67,4 +67,13 @@ Route::prefix('admin')->middleware(['auth','isAdmin'])->group(function() {
         Route::put('/user/{user}', 'update');
         Route::get('/user/{user}/delete', 'destroy');
     });
+
+    Route::controller(App\Http\Controllers\Admin\WishlistController::class)->group(function () {
+        Route::get('/{user}/wishlist', 'index');
+        Route::get('/wishlist/create', 'create');
+        Route::post('/wishlist', 'store');
+        Route::get('/wishlist/{wishlist}/edit', 'edit');
+        Route::put('/wishlist/{wishlist}', 'update');
+        Route::get('/{user}/wishlist/{post}/delete', 'destroy');
+    });
 });

@@ -46,8 +46,10 @@
                                     <td>{{ $type->name }}</td>
                                     <td>
                                         <div class="float-end">
-                                            <a href="{{ url('admin/type/'.$type->id.'/edit') }}" class="btn btn-success">Edit</a>
-                                            <a href="#" wire:click='deletetype({{ $type->id }})' data-bs-toggle="modal" data-bs-target="#deleteModal" class="btn btn-danger">Delete</a>
+                                            <a href="{{ url('admin/type/'.$type->id.'/edit') }}" class="btn btn-success">
+                                                <i class="bi bi-pencil-square"></i></a>
+                                            <a href="#" wire:click='deletetype({{ $type->id }})' data-bs-toggle="modal" data-bs-target="#deleteModal" class="btn btn-danger">
+                                                <i class="bi bi-trash3-fill"></i></a>
                                         </div>
                                     </td>
                                 </tr>

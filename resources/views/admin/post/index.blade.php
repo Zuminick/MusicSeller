@@ -43,8 +43,11 @@
                                 <td>{{ $post->status }}</td>
                                 <td>
                                     <div class="float-end">
-                                        <a href="{{ url('admin/post/'.$post->id.'/edit') }}" class="btn btn-success">Edit</a>
-                                        <a href=" {{ url('admin/post/'.$post->id.'/delete') }}" onclick="return confirm('Are you sure you want to delete the post?')" class="btn btn-danger">Delete</a>
+                                        <a href="{{ url('admin/post/'.$post->id.'/edit') }}" class="btn btn-success">
+                                            <i class="bi bi-pencil-square"></i></a>
+                                        <a href=" {{ url('admin/post/'.$post->id.'/delete') }}" onclick="return confirm('Are you sure you want to delete the post?')" class="btn btn-danger">
+                                            <i class="bi bi-trash3-fill"></i></a>
+                                            <a href="{{ url('') }}" class="btn btn-success">Forms</a>
                                     </div>
                                 </td>
                             </tr>

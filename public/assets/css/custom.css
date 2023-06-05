@@ -107,6 +107,12 @@
     padding: 10px 10px;
     background: #e75050;
 }
+.bg-color-red1{
+    background: #e75050;
+}
+.bg-color-red2{
+    background: #f16464;
+}
 .Post-card .Post-card-body .Post-artist{
     font-size: 14px;
     font-weight: 400;

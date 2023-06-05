@@ -38,4 +38,8 @@ class Post extends Model
     {
         return $this->hasMany(Image::class, 'post_id', 'id');
     }
+    public function wishlist()
+    {
+        return $this->hasMany(Wishlist::class, 'post_id', 'id');
+    }
 }

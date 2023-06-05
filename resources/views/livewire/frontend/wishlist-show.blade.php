@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="shopping-cart">
-                        @if (!$wishlist)
+                        @if ($wishlist)
                             <div class="cart-header d-none d-sm-none d-mb-block d-lg-block">
                                 <div class="row">
                                     <div class="col-md-1"></div>
