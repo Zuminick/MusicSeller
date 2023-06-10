@@ -7,7 +7,7 @@
 .nav-link{
     color: #f0e3e3;;
 }
-.post-create-btn{
+.red-hover-btn{
     color: #ffffff;
     background: #d23434;
     border: 0px;
@@ -15,9 +15,11 @@
     border-radius: 8px;
     transition-duration: 0.4s;
 }
-.post-create-btn:hover{
-    color: #000;
-    background-color: #fff;
+.red-hover-btn:hover{
+    border: 2px;
+    border-color: #000;
+    color: #d23434;
+    background-color: #ffffff;
 }
 
 .shopping-wishlist .wishlist-header{

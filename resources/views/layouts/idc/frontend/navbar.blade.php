@@ -58,7 +58,7 @@
                                 </li>
                             @endif
                         @else
-                        <a class="btn btn-primary btn-lg post-create-btn p-2 px-4" href="{{ url('post/create') }}">Create a post</a>
+                        <a class="btn btn-primary btn-lg red-hover-btn p-2 px-4" href="{{ url('post/create') }}">Create a post</a>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     <i class="bi bi-person-fill"></i>

@@ -44,15 +44,15 @@
                             <div>
                                 <div class="mb-3">
                                     <label>User ID</label>
-                                    <input type="integer" name="user_id" class="form-control" />
+                                    <input type="integer" name="user_id" class="form-control" required/>
                                 </div>
                                 <div class="mb-3">
                                     <label>Artist/Band name</label>
-                                    <input type="text" name="artist" class="form-control" />
+                                    <input type="text" name="artist" class="form-control" required/>
                                 </div>
                                 <div class="mb-3">
                                     <label>Album name</label>
-                                    <input type="text" name="name" class="form-control" />
+                                    <input type="text" name="name" class="form-control" required/>
                                 </div>
 
                                 <div class="container">

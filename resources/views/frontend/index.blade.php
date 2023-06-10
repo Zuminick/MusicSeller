@@ -10,19 +10,19 @@
         <div class="py-6 py-md-4 bg-light">    
             <div class="position-fixed pr-6 mr-6" style="top: 50%; transform: translateY(-50%); left: 0;">
                 <div class="btn-group-vertical">
-                  <button class="btn btn-primary d-flex flex-column align-items-center bg-color-red1 border border-white">
+                  <button class="btn btn-primary d-flex flex-column align-items-center border red-hover-btn">
                     <i class="bi bi-music-note" style="font-size: 48px;"></i>
                     All
                   </button>
-                  <button class="btn btn-primary d-flex flex-column align-items-center bg-color-red1 border border-white">
+                  <button class="btn btn-primary d-flex flex-column align-items-center border red-hover-btn">
                     <i class="bi bi-disc-fill" style="font-size: 48px;"></i>
                     CD-disk
                   </button>
-                  <button class="btn btn-primary d-flex flex-column align-items-center bg-color-red1 border border-white">
+                  <button class="btn btn-primary d-flex flex-column align-items-center border red-hover-btn">
                     <i class="bi bi-vinyl-fill" style="font-size: 48px;"></i>
                     Vinyl
                   </button>
-                  <button class="btn btn-primary d-flex flex-column align-items-center bg-color-red1 border border-white">
+                  <button class="btn btn-primary d-flex flex-column align-items-center border red-hover-btn">
                     <i class="bi bi-cassette-fill" style="font-size: 48px;"></i>
                     Tape
                   </button>
