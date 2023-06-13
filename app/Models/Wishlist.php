@@ -11,6 +11,7 @@ class Wishlist extends Model
 {
 
     protected $table = 'wishlists';
+    public $timestamps = false;
     protected $fillable = [
 
         'user_id',
